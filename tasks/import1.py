@@ -12,8 +12,12 @@ restrictions:
 
 3) deepseafish() should be located in a file called "something_in_the_deep.py"
 """
-
-from tasks.shallow.deeper.deepest.too_deep import deepseafish
+import sys
+sys.path.append('./shallow/deeper/deepest/too_deep')
+from something_in_the_deep import deepseafish
 
 def whats_at_the_bottom():
     return deepseafish()
+
+
+print(whats_at_the_bottom())
